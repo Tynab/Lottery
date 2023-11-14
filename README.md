@@ -42,6 +42,6 @@ def lin_reg(df, ip_col_name_cnt, ip_col_name_cons, op_col_name):
 <img src='pic/1.png' align='left' width='3%' height='3%'></img>
 <div style='display:flex;'>
 
-- Pandas » 1.0.2
+- scikit-learn » 1.0.2
 
 </div>
