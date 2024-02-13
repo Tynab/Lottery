@@ -97,8 +97,8 @@ head_df = pd.DataFrame(head_data, columns=['date', '0', '1', '2', '3', '4', '5',
 tail_df = pd.DataFrame(tail_data, columns=['date', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
 
 if is_mod:
-    head_df.to_csv("head.csv", mode='a', header=False, index=False, line_terminator='\n')
-    tail_df.to_csv("tail.csv", mode='a', header=False, index=False, line_terminator='\n')
+    head_df.to_csv("head.csv", mode='a', header=False, index=False, lineterminator='\n')
+    tail_df.to_csv("tail.csv", mode='a', header=False, index=False, lineterminator='\n')
 else:
     head_df.to_csv("head.csv", index=False)
     tail_df.to_csv("tail.csv", index=False)
