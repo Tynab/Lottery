@@ -24,7 +24,7 @@ options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 
-xpath_list = ['/html/body/div[1]/div/center/div/div/div[3]/div/div/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div[2]/div/div/div[1]/div[2]/table/tbody/tr/td/table[1]/tbody/tr/td/table/tbody/tr[2]/td[2]/div',
+XPATHS = ['/html/body/div[1]/div/center/div/div/div[3]/div/div/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div[2]/div/div/div[1]/div[2]/table/tbody/tr/td/table[1]/tbody/tr/td/table/tbody/tr[2]/td[2]/div',
               '/html/body/div[1]/div/center/div/div/div[3]/div/div/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div[2]/div/div/div[1]/div[2]/table/tbody/tr/td/table[1]/tbody/tr/td/table/tbody/tr[3]/td[2]/div',
               '/html/body/div[1]/div/center/div/div/div[3]/div/div/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div[2]/div/div/div[1]/div[2]/table/tbody/tr/td/table[1]/tbody/tr/td/table/tbody/tr[4]/td[2]/div[1]',
               '/html/body/div[1]/div/center/div/div/div[3]/div/div/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div[2]/div/div/div[1]/div[2]/table/tbody/tr/td/table[1]/tbody/tr/td/table/tbody/tr[4]/td[2]/div[2]',
@@ -66,7 +66,7 @@ with webdriver.Chrome(options=options) as browser:
         row.extend([0] * 10)
 
         try:
-            for xpath in xpath_list:
+            for xpath in XPATHS:
                 for digit in browser.find_element(By.XPATH, xpath).text:
                     if digit.isdigit():
                         row[int(digit) + 1] += 1
