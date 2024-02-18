@@ -8,7 +8,7 @@ Phân tích dữ liệu xổ số kiến thiết giúp dự đoán lô đề d�
 
 ## CODE DEMO
 ```python
-# Build model LSTM
+# Xây dựng mô hình LSTM
 model = Sequential()
 model.add(LSTM(50, input_shape=(X_train_reshaped.shape[1], X_train_reshaped.shape[2])))
 model.add(Dense(10))
