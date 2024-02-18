@@ -3,7 +3,7 @@ Phân tích dữ liệu xổ số kiến thiết giúp dự đoán lô đề d�
 
 ## HÌNH ẢNH DEMO
 <p align='center'>
-<img src='pic/0.png'></img>
+<img src='pic/0.jpg'></img>
 </p>
 
 ## CODE DEMO
